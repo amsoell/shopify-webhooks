@@ -1,0 +1,27 @@
+name: Tests
+
+on: [push]
+
+jobs:
+  execute-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Copy .env
+      run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+
+    - name: Install Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+
+    - name: Install composer dependencies
+      run: composer install --prefer-dist
+
+    - name: Generate encryption key
+      run: export APP_KEY=`php artisan key:generate --show`
+
+    - name: Run test suite
+      run: php8.1 vendor/bin/phpunit tests/*
