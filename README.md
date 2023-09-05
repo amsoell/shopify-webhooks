@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/amsoell/shopify-webhooks.svg?style=flat-square)](https://packagist.org/packages/amsoell/shopify-webhooks)
 [![Total Downloads](https://img.shields.io/packagist/dt/amsoell/shopify-webhooks.svg?style=flat-square)](https://packagist.org/packages/amsoell/shopify-webhooks)
-![GitHub Actions](https://github.com/amsoell/shopify-webhooks/actions/workflows/main.yml/badge.svg)
+![Tests](https://github.com/amsoell/shopify-webhooks/actions/workflows/tests.yaml/badge.svg)
 
 Middleware to [validate incoming Shopify webhooks](https://shopify.dev/docs/apps/webhooks/configuration/https) and optionally log them.
 
